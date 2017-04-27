@@ -61,3 +61,10 @@ optional: `-d` makes the container running in the background (use `docker stop` 
 The repository contains a [debug configuration](.idea/runConfigurations/node_debug_5858.xml) which you can use with `WebStorm` for example. 
 See more details about remote node.js debugging [here](https://www.jetbrains.com/help/webstorm/2017.1/run-debug-configuration-node-js-remote-debug.html)
 
+## TDD with Karma/Jasmine
+
+For testing Typescript implementations, [Karma](https://karma-runner.github.io/1.0/index.html) as a testing framework is used, combined with [Jasmine](https://jasmine.github.io/2.5/node.html) as assertion library. 
+
+Trigger the (continuous) testing for your TDD environment by the provided [Karma Run configuration](.idea/runConfigurations/karma_test.xml), or just use
+
+`npm test`
