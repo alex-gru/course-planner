@@ -4,11 +4,12 @@ import * as reload from "reload";
 import * as mongoose from "mongoose";
 import * as path from "path";
 
-// Constants
-const port = 8080;
-
-// App
+const port = 80;
 const app = express();
+
+let Greeting;
+let CourseModel;
+let ModuleModel;
 
 // provide paths to static files
 app.use("/js", express.static(__dirname + '/public/js'));
@@ -19,31 +20,12 @@ app.use("/views", express.static(__dirname + '/views'));
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
-let Greeting;
-let CourseModel;
-let ModuleModel;
-
-app.get('/', (req, res) => {
-    Greeting.findOne((err, greeting) => {
-        res.render('index', {title: "Course Planner", greeting: greeting.text});
-    });
-    CourseModel.findOne((err, course) => {
-        console.log(course.name);
-    });
-    ModuleModel.findOne((err, module) => {
-        console.log(module.name);
-    });
-});
-
 const server = http.createServer(app);
-
 reload(server, app);
-
 server.listen(port, () => {
     const host = server.address().address;
     console.log("Webapp listening at http://%s:%s", host, port)
 });
-
 
 if (mongoose.connection.readyState === 0) {
     /* 0 = disconnected, 1 = connected,  2 = connecting,  3 = disconnecting  */
@@ -81,3 +63,43 @@ function log(message: any) {
     const date = new Date();
     console.log(date.toISOString() + " - ", message);
 }
+
+
+// REST
+
+app.get('/', (req, res) => {
+    Greeting.findOne((err, greeting) => {
+        res.render('index', {title: "Course Planner", greeting: greeting.text});
+    });
+    CourseModel.findOne((err, course) => {
+        console.log(course.name);
+    });
+    ModuleModel.findOne((err, module) => {
+        console.log(module.name);
+    });
+});
+
+app.get('/courses', (req, res) => {
+    CourseModel.find({}, (err, courses) => {
+        res.json(courses);
+    });
+});
+app.get('/course/:id', (req, res) => {
+    if (req.params.id) {
+        CourseModel.find({id: req.params.id}, (err, course) => {
+            res.json(course);
+        });
+    }
+});
+app.get('/modules', (req, res) => {
+    ModuleModel.find({}, (err, modules) => {
+        res.json(modules);
+    });
+});
+app.get('/module/:id', (req, res) => {
+    if (req.params.id) {
+        ModuleModel.find({id: req.params.id}, (err, module) => {
+            res.json(module);
+        });
+    }
+});
