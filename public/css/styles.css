@@ -1,3 +1,19 @@
 input#name {
     margin-left: 10px;
 }
+
+ul#courses_list {
+    list-style: none;
+}
+
+ul#courses_list > li {
+    margin-bottom: 50px;
+}
+
+ul#courses_list > li > a {
+    border-style: solid;
+    border-radius: 5px;
+    background-color: lightblue;
+    padding: 10px;
+    text-decoration: none;
+}
