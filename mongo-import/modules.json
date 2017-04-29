@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Formal principles and maths",
+    "obligatory": true
+  },
+  {
+    "id": 2,
+    "name": "Technical computer science",
+    "obligatory": true
+  },
+  {
+    "id": 3,
+    "name": "Practical computer science",
+    "obligatory": true
+  },
+  {
+    "id": 4,
+    "name": "General foundations of science",
+    "obligatory": true
+  },
+  {
+    "id": 5,
+    "name": "Image Processing",
+    "obligatory": false
+  }
+]

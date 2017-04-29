@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Introduction to Programming",
+    "number": "511.053",
+    "ects": 4,
+    "type": "P",
+    "lecturer": "Hagenauer",
+    "moduleId": 3
+  },
+  {
+    "id": 2,
+    "name": "Introduction to Programming",
+    "number": "511.052",
+    "ects": 3,
+    "type": "L",
+    "lecturer": "Hagenauer",
+    "moduleId": 3
+  },
+  {
+    "id": 3,
+    "name": "Mathematical Foundations",
+    "number": "511.001",
+    "ects": 3,
+    "type": "L",
+    "lecturer": "Sokolova",
+    "moduleId": 1
+  },
+  {
+    "id": 4,
+    "name": "Mathematical Foundations",
+    "number": "511.002",
+    "ects": 5,
+    "type": "P",
+    "lecturer": "Sokolova",
+    "moduleIdId": 1
+  },
+  {
+    "id": 5,
+    "name": "Discrete Mathematics for Computer Science",
+    "number": "511.007",
+    "ects": 3,
+    "type": "L",
+    "lecturer": "Held",
+    "moduleIdId": 1
+  },
+  {
+    "id": 6,
+    "name": "Image Processing and Computer Vision",
+    "number": "511.120",
+    "ects": 2,
+    "type": "L",
+    "lecturer": "Uhl",
+    "moduleIdId": 5
+  }
+]
