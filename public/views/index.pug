@@ -1,0 +1,22 @@
+block config
+  include config
+
+doctype html
+html(ng-app="app")
+  head
+    title #{title}
+  body
+    block scripts.
+      script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js')
+      script(src='/reload/reload.js')
+      block styles.
+      link(rel='stylesheet' href='/css/styles.css')
+      link(href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet")
+
+    greeter
+    course-list
+    script const greeting = '#{greeting}'
+    script(src='/js/app.js')
+    script(src='/js/greeter.component.js')
+    script(src='/js/course-list.component.js')
+

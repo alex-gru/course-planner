@@ -1,14 +1,14 @@
 {
   "files": [
     "server.ts",
-    "public/js/greeter.ts",
-
-    "public/js/Course.ts",
-    "public/js/CourseSpec.ts"
+    "public/js/*.ts"
   ],
   "types": [
     "node",
     "angular",
     "jasmine"
-  ]
+  ],
+  "compilerOptions": {
+    "sourceMap": true
+  }
 }

@@ -1,40 +1,43 @@
 {
-	"name": "docker-MEAN-ts-starter",
-	"version": "0.0.1",
-  	"description": "Starter project for a dockerized MEAN webapp with Typescript implementations and full support for hot code reload and debugging.",
-  	"author": "Alexander Gruschina <grusch.alex@gmail.com>",
-	"repository": "https://github.com/alex-gru/docker-MEAN-ts-starter",
-	"license": "MIT",
-  	"main": "server.js",
-	"scripts": {
-		"build": "tsc",
-		"build:watch": "tsc -w",
-		"serveDebug": "nodemon -L --debug /usr/src/app/",
-		"serve": "node /usr/src/app/",
-		"start": "concurrently \"npm run build\" \"npm run serve\"",
-		"startDebug": "concurrently \"npm run build:watch\" \"npm run serveDebug\"",
-		"test": "karma start karma.conf.js"
-	},
-	"dependencies": {
-		"express": "~4.14.0",
-		"typescript": "~2.3.1",
-		"pug": "~2.0.0-beta11",
-		"path": "~0.12.7",
-		"http": "~0.0.0",
-		"mongoose": "~4.9.5",
-		"reload": "~1.1.2"
-	},
-	"devDependencies": {
-		"concurrently": "^3.2.0",
-		"@types/node": "~7.0.13",
-		"@types/angular": "~1.6.15",
-		"jasmine": "~2.6.0",
-		"jasmine-core": "~2.6.1",
-		"@types/jasmine": "~2.5.47",
-		"jasmine-ts": "~0.1.0",
-		"karma": "~1.6.0",
-		"karma-jasmine": "~1.1.0",
-		"karma-chrome-launcher": "~2.0.0",
-		"karma-typescript-preprocessor": "~0.3.1"
-	}
+  "name": "docker-MEAN-ts-starter",
+  "version": "0.0.1",
+  "description": "Course Planner is a dockerized MEAN-ts webapp",
+  "author": "Alexander Gruschina <grusch.alex@gmail.com>",
+  "repository": "https://github.com/alex-gru/course-planner",
+  "license": "MIT",
+  "main": "server.js",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "render": "pug public/views",
+    "render:watch": "pug public/views -w",
+    "serveDebug": "nodemon -L --debug /usr/src/app/",
+    "serve": "node /usr/src/app/",
+    "start": "concurrently \"npm run build\" \"npm run render\" \"npm run serve\"",
+    "startDebug": "concurrently \"npm run build:watch\" \"npm run render:watch\" \"npm run serveDebug\"",
+    "test": "karma start karma.conf.js"
+  },
+  "dependencies": {
+    "express": "~4.14.0",
+    "typescript": "~2.3.1",
+    "pug": "~2.0.0-beta11",
+    "path": "~0.12.7",
+    "http": "~0.0.0",
+    "mongoose": "~4.9.5",
+    "reload": "~1.1.2",
+    "pug-cli": "~1.0.0-alpha6"
+  },
+  "devDependencies": {
+    "concurrently": "^3.2.0",
+    "@types/node": "~7.0.13",
+    "@types/angular": "~1.6.15",
+    "jasmine": "~2.6.0",
+    "jasmine-core": "~2.6.1",
+    "@types/jasmine": "~2.5.47",
+    "jasmine-ts": "~0.1.0",
+    "karma": "~1.6.0",
+    "karma-jasmine": "~1.1.0",
+    "karma-chrome-launcher": "~2.0.0",
+    "karma-typescript-preprocessor": "~0.3.1"
+  }
 }
