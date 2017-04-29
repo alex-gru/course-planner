@@ -8,7 +8,7 @@ app.controller("ctrl", ($scope, $http) => {
     $scope.name = "Jane Doe";
     $scope.description = "This is a dockerized MEAN webapp, implemented in Typescript, with full support for hot code reload and debugging with an IDE.";
 
-    $http.get("/courses").then((response) => {
+    $http.get("/api/courses").then((response) => {
         $scope.courses = response.data;
     });
 });

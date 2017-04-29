@@ -65,7 +65,7 @@ function log(message: any) {
 }
 
 
-// REST
+// API
 
 app.get('/', (req, res) => {
     Greeting.findOne((err, greeting) => {
@@ -73,24 +73,24 @@ app.get('/', (req, res) => {
     });
 });
 
-app.get('/courses', (req, res) => {
+app.get('/api/courses', (req, res) => {
     CourseModel.find({}, (err, courses) => {
         res.json(courses);
     });
 });
-app.get('/course/:id', (req, res) => {
+app.get('/api/course/:id', (req, res) => {
     if (req.params.id) {
         CourseModel.find({id: req.params.id}, (err, course) => {
             res.json(course);
         });
     }
 });
-app.get('/modules', (req, res) => {
+app.get('/api/modules', (req, res) => {
     ModuleModel.find({}, (err, modules) => {
         res.json(modules);
     });
 });
-app.get('/module/:id', (req, res) => {
+app.get('/api/module/:id', (req, res) => {
     if (req.params.id) {
         ModuleModel.find({id: req.params.id}, (err, module) => {
             res.json(module);

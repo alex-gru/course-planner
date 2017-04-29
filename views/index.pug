@@ -11,6 +11,7 @@ html
             script(src='/reload/reload.js')
         block styles.
             link(rel='stylesheet', href='/css/styles.css')
+            link(href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto", rel="stylesheet")
 
         div(ng-app="app" ng-controller="ctrl")
             p
@@ -22,6 +23,6 @@ html
             p Courses:
             ul(id="courses_list")
                 li(ng-repeat="course in courses")
-                    a(href="#") {{ course.number + ' | ' + course.name }}
+                    a(href="/course/{{ course.id }}") {{ course.number + ' | ' + course.name }}
         script const greeting = '#{greeting}'
         script(src='/js/greeter.js')
