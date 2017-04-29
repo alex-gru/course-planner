@@ -71,12 +71,6 @@ app.get('/', (req, res) => {
     Greeting.findOne((err, greeting) => {
         res.render('index', {title: "Course Planner", greeting: greeting.text});
     });
-    CourseModel.findOne((err, course) => {
-        console.log(course.name);
-    });
-    ModuleModel.findOne((err, module) => {
-        console.log(module.name);
-    });
 });
 
 app.get('/courses', (req, res) => {
