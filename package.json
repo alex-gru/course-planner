@@ -1,7 +1,7 @@
 {
-  "name": "docker-MEAN-ts-starter",
+  "name": "Course Planner",
   "version": "0.0.1",
-  "description": "Course Planner is a dockerized MEAN-ts webapp",
+  "description": "Plan your curriculum with this dockerized MEAN-ts webapp",
   "author": "Alexander Gruschina <grusch.alex@gmail.com>",
   "repository": "https://github.com/alex-gru/course-planner",
   "license": "MIT",
