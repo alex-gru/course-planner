@@ -2,9 +2,19 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+body {
+    margin: 0;
+}
+
+#app-container {
+    margin: 8px;
+}
+
 input#name {
     margin-left: 10px;
 }
+
+/*COURSE LIST*/
 
 ul#courses_list {
     list-style: none;
@@ -30,4 +40,34 @@ ul#courses_list > li > a:hover {
 
 a, a:visited, a:hover, a:active {
     color: inherit;
+}
+
+/*DASHBOARD*/
+
+.dashboard {
+    width: 100%;
+}
+ul#dashboard {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+ul#dashboard > li {
+    float: left;
+}
+
+ul#dashboard > li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+ul#dashboard > li a:hover {
+    background-color: #111;
 }

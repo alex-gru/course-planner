@@ -1,7 +1,6 @@
 {
-  "files": [
-    "server.ts",
-    "public/js/*.ts"
+  "exclude": [
+    "node_modules"
   ],
   "types": [
     "node",
