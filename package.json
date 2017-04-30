@@ -1,5 +1,5 @@
 {
-  "name": "Course Planner",
+  "name": "course-planner",
   "version": "0.0.1",
   "description": "Plan your curriculum with this dockerized MEAN-ts webapp",
   "author": "Alexander Gruschina <grusch.alex@gmail.com>",
