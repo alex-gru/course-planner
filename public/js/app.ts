@@ -7,6 +7,9 @@ const app = angular.module("app", ["ngRoute"])
       .when("/home", {
         template: "<home></home>"
       })
+      .when("/courses/new", {
+        template: "<course-create></course-create>"
+      })
       .when("/courses", {
         template: "<courses></courses>"
       })

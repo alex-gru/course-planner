@@ -10,7 +10,7 @@ body {
     margin: 20px;
 }
 
-input#name {
+input {
     margin-left: 10px;
 }
 
@@ -24,62 +24,18 @@ ul.list > li {
     margin-bottom: 50px;
 }
 
-ul.list > li > a {
-    /*border-style: solid;*/
-    border-radius: 5px;
-    padding: 10px;
-    text-decoration: none;
-    color: #4b4b4b;
-}
-
-ul.list > li > a#course {
-    background-color: lightblue;
-}
-
-ul.list > li > a#module {
-    background-color: lightsalmon;
-}
-
-ul.list > li > a:hover {
-    transition: all 60ms ease;
-    opacity: .85;
-}
-
-a, a:visited, a:hover, a:active {
-    color: inherit;
-}
-
 /*MENU*/
 
 menu {
     margin: 0;
     padding: 0;
-}
-ul#menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-}
-
-ul#menu > li {
-    float: left;
+    line-height: 30px;
 }
 
 .active {
-    background-color: #4CAF50;
+    background-color: #4CAF50 !important;
 }
 
-ul#menu > li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-ul#menu > li a:hover:not(.active) {
-    background-color: #111;
+.create-form {
+    max-width: 500px;
 }
