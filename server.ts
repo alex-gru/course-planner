@@ -67,12 +67,6 @@ function log(message: any) {
 
 // API
 
-app.get('/', (req, res) => {
-  Greeting.findOne((err, greeting) => {
-    res.render('index', {title: "Course Planner", greeting: greeting.text});
-  });
-});
-
 app.get('/api/courses', (req, res) => {
   CourseModel.find({}, (err, courses) => {
     res.json(courses);
@@ -96,4 +90,12 @@ app.get('/api/module/:id', (req, res) => {
       res.json(module);
     });
   }
+});
+
+// SPA entrypoint
+
+app.get('*', function(req, res) {
+  Greeting.findOne((err, greeting) => {
+    res.render('index', {title: "Course Planner", greeting: greeting.text});
+  });
 });

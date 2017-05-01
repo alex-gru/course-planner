@@ -1,0 +1,5 @@
+h1 Courses
+p
+  ul(id="courses_list")
+    li(ng-repeat="course in courses")
+      a(href="/course/{{ course.id }}") {{ course.number + ' | ' + course.name }}
