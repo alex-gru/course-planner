@@ -33,7 +33,7 @@
     "ects": 5,
     "type": "P",
     "lecturer": "Sokolova",
-    "moduleIdId": 1
+    "moduleId": 1
   },
   {
     "id": 5,
@@ -42,7 +42,7 @@
     "ects": 3,
     "type": "L",
     "lecturer": "Held",
-    "moduleIdId": 1
+    "moduleId": 1
   },
   {
     "id": 6,
@@ -51,6 +51,6 @@
     "ects": 2,
     "type": "L",
     "lecturer": "Uhl",
-    "moduleIdId": 5
+    "moduleId": 5
   }
 ]

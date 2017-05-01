@@ -2,4 +2,4 @@ h1 Courses
 p
   ul(class="list")
     li(ng-repeat="course in courses")
-      a(ng-href="/course/{{ course.id }}") {{ course.number + ' | ' + course.name }}
+      a(ng-href="/course/{{ course.id }}" id="course") {{ course.number + ' | ' + course.name }}

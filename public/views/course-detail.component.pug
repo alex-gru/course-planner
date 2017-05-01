@@ -1,1 +1,9 @@
 h1 {{ course.name }}
+p Number:   {{ course.number }}
+p ECTS:     {{ course.ects }}
+p Type:     {{ course.type }}
+p Lecturer: {{ course.lecturer }}
+p Module:
+  ul(class="list")
+    li
+      a(ng-href="/module/{{ module.id }}" id="module") {{ module.name }}

@@ -41,7 +41,7 @@ if (mongoose.connection.readyState === 0) {
         {
           id: Number,
           name: String,
-          obligatory: String
+          obligatory: Boolean
         }
       ), 'modules');     // collection name
     CourseModel = mongoose.model('Course',
@@ -88,6 +88,13 @@ app.get('/api/module/:id', (req, res) => {
   if (req.params.id) {
     ModuleModel.findOne({id: req.params.id}, (err, module) => {
       res.json(module);
+    });
+  }
+});
+app.get('/api/module/:id/courses', (req, res) => {
+  if (req.params.id) {
+    CourseModel.find({moduleId: req.params.id}, (err, courses) => {
+      res.json(courses);
     });
   }
 });

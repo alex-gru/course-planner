@@ -27,10 +27,17 @@ ul.list > li {
 ul.list > li > a {
     /*border-style: solid;*/
     border-radius: 5px;
-    background-color: lightblue;
     padding: 10px;
     text-decoration: none;
     color: #4b4b4b;
+}
+
+ul.list > li > a#course {
+    background-color: lightblue;
+}
+
+ul.list > li > a#module {
+    background-color: lightsalmon;
 }
 
 ul.list > li > a:hover {

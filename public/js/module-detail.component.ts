@@ -4,5 +4,8 @@ angular.module("app").component('moduleDetail', {
     $http.get("/api/module/" + $routeParams.id).then((response) => {
       $scope.module = response.data;
     });
+    $http.get("/api/module/" + $routeParams.id + "/courses").then((response) => {
+      $scope.courses = response.data;
+    });
   }
 });
