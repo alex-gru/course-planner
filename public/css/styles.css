@@ -14,17 +14,17 @@ input#name {
     margin-left: 10px;
 }
 
-/*COURSES*/
+/*COURSES / MODULES*/
 
-ul#courses_list {
+ul.list {
     list-style: none;
 }
 
-ul#courses_list > li {
+ul.list > li {
     margin-bottom: 50px;
 }
 
-ul#courses_list > li > a {
+ul.list > li > a {
     /*border-style: solid;*/
     border-radius: 5px;
     background-color: lightblue;
@@ -33,7 +33,7 @@ ul#courses_list > li > a {
     color: #4b4b4b;
 }
 
-ul#courses_list > li > a:hover {
+ul.list > li > a:hover {
     transition: all 60ms ease;
     opacity: .85;
 }

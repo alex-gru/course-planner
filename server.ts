@@ -74,7 +74,7 @@ app.get('/api/courses', (req, res) => {
 });
 app.get('/api/course/:id', (req, res) => {
   if (req.params.id) {
-    CourseModel.find({id: req.params.id}, (err, course) => {
+    CourseModel.findOne({id: req.params.id}, (err, course) => {
       res.json(course);
     });
   }
@@ -86,7 +86,7 @@ app.get('/api/modules', (req, res) => {
 });
 app.get('/api/module/:id', (req, res) => {
   if (req.params.id) {
-    ModuleModel.find({id: req.params.id}, (err, module) => {
+    ModuleModel.findOne({id: req.params.id}, (err, module) => {
       res.json(module);
     });
   }
