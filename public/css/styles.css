@@ -67,6 +67,10 @@ ul#menu > li {
     float: left;
 }
 
+.active {
+    background-color: #4CAF50;
+}
+
 ul#menu > li a {
     display: block;
     color: white;
@@ -76,6 +80,6 @@ ul#menu > li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-ul#menu > li a:hover {
+ul#menu > li a:hover:not(.active) {
     background-color: #111;
 }
