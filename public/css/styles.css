@@ -7,7 +7,7 @@ body {
 }
 
 #app-container {
-    margin: 8px;
+    margin: 20px;
 }
 
 input#name {
@@ -49,12 +49,13 @@ a, a:visited, a:hover, a:active {
     color: inherit;
 }
 
-/*DASHBOARD*/
+/*MENU*/
 
-.dashboard {
-    width: 100%;
+menu {
+    margin: 0;
+    padding: 0;
 }
-ul#dashboard {
+ul#menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -62,11 +63,11 @@ ul#dashboard {
     background-color: #333;
 }
 
-ul#dashboard > li {
+ul#menu > li {
     float: left;
 }
 
-ul#dashboard > li a {
+ul#menu > li a {
     display: block;
     color: white;
     text-align: center;
@@ -75,6 +76,6 @@ ul#dashboard > li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-ul#dashboard > li a:hover {
+ul#menu > li a:hover {
     background-color: #111;
 }

@@ -4,6 +4,9 @@ const app = angular.module("app", ["ngRoute"])
       .when("/", {
         redirectTo: "/home",
       })
+      .when("/home", {
+        template: "<home></home>"
+      })
       .when("/courses", {
         template: "<courses></courses>"
       })
