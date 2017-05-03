@@ -11,6 +11,11 @@ div(class="w3-card create-form")
       label(class="w3-text-blue") ID:
       input(type="text" class="w3-input w3-border" value="{{ course.id }}" name="course[id]")
     div(class="w3-row")
+      label(class="w3-text-blue") Module:
+      select(class="w3-select" name="course[moduleId]")
+        option(ng-repeat="module in modules" value="{{ module.id }}")
+          a {{ module.name }}
+    div(class="w3-row")
       label(class="w3-text-blue") Name:
       input(type="text" class="w3-input w3-border" value="{{ course.name }}" name="course[name]")
     div(class="w3-row")
