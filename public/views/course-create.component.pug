@@ -3,6 +3,11 @@ div(class="w3-card create-form")
     h2 New Course
   form(class="w3-container w3-padding-small" action="/api/courses/new" method="POST")
     div(class="w3-row")
+      label(class="w3-text-blue") Module:
+      select(class="w3-select w3-teal" name="course[moduleId]")
+        option(ng-repeat="module in modules" value="{{ module.id }}")
+          a {{ module.name }}
+    div(class="w3-row")
       label(class="w3-text-blue") ID:
       input(type="text" class="w3-input w3-border" value="{{ course.id }}" name="course[id]")
     div(class="w3-row")
@@ -26,10 +31,5 @@ div(class="w3-card create-form")
     div(class="w3-row")
       label(class="w3-text-blue") Objective:
       input(type="text" class="w3-input w3-border" value="{{ course.objective }}" name="course[objective]")
-    div(class="w3-row")
-      label(class="w3-text-blue") Module:
-      ul(class="list")
-        li(ng-repeat="module in modules")
-          a(ng-href="/module/{{ module.id }}" class="module") {{ module.name }}
-            i(class="fa fa-check" aria-hidden="true")
+    br
     button(type="submit" class="module w3-btn w3-red w3-round") Submit

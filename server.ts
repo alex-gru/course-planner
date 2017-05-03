@@ -135,6 +135,6 @@ app.get('/api/module/:id/courses', (req, res) => {
 
 // SPA entrypoint
 
-app.get('*', function(req, res) {
+app.get('*', function (req, res) {
   res.render('index', {title: "Course Planner"});
 });
