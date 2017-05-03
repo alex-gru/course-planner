@@ -9,8 +9,8 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'public/js/Course.ts',
-      'public/js/CourseSpec.ts'
+      'app/dto/Course.ts',
+      'app/dto/CourseSpec.ts'
     ],
     // list of files to exclude
     exclude: [
@@ -18,8 +18,8 @@ module.exports = function(config) {
 
     // preprocess matching files before serving them to the browser
     preprocessors: {
-      'public/js/Course.ts': ['typescript'],
-      'public/js/CourseSpec.ts': ['typescript']
+      'app/dto/Course.ts': ['typescript'],
+      'app/dto/CourseSpec.ts': ['typescript']
     },
     typescriptPreprocessor: {
       options: {

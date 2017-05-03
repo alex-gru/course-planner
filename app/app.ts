@@ -11,13 +11,13 @@ const app = angular.module("app", ["ngRoute"])
         template: "<course-create></course-create>"
       })
       .when("/courses", {
-        template: "<courses></courses>"
+        template: "<course-list></course-list>"
       })
       .when("/course/:id", {
         template: "<course-detail></course-detail>"
       })
       .when("/modules", {
-        template: "<modules></modules>"
+        template: "<module-list></module-list>"
       })
       .when("/modules/new", {
         template: "<module-create></module-create>"

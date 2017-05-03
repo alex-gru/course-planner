@@ -12,13 +12,11 @@ let CourseModel;
 let ModuleModel;
 
 // provide paths to static files
-app.use("/js", express.static(__dirname + '/public/js'));
-app.use("/css", express.static(__dirname + '/public/css'));
-app.use("/views", express.static(__dirname + '/public/views'));
+app.use("/", express.static(__dirname + '/app'));
 
 // view engine setup
 app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, 'public/views'));
+app.set('views', path.join(__dirname, '/app'));
 
 app.use(bodyParser.urlencoded({
   extended: true

@@ -9,8 +9,8 @@
   "scripts": {
     "build": "tsc",
     "build:watch": "tsc -w",
-    "render": "pug public/views",
-    "render:watch": "pug public/views -w",
+    "render": "pug app",
+    "render:watch": "pug app -w",
     "serveDebug": "nodemon -L --debug /usr/src/app/",
     "serve": "node /usr/src/app/",
     "start": "concurrently \"npm run build\" \"npm run render\" \"npm run serve\"",

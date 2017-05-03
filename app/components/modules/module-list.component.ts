@@ -1,5 +1,5 @@
-angular.module("app").component('modules', {
-  templateUrl: '/views/modules.component.html',
+angular.module("app").component('moduleList', {
+  templateUrl: '/components/modules/module-list.component.html',
   controller: ($scope, $http) => {
     $http.get("/api/modules").then((response) => {
       $scope.modules = response.data;
