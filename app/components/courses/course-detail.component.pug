@@ -1,25 +1,26 @@
-h1 {{ course.name }}
-p
-  b ID:&nbsp;
-  span {{ course.id }}
-p
-  b Number:&nbsp;
-  span {{ course.number }}
-p
-  b ECTS:&nbsp;
-  span {{ course.ects }}
-p
-  b Type:&nbsp;
-  span {{ course.type }}
-p
-  b Lecturer:&nbsp;
-  span {{ course.lecturer }}
-p
-  b Description:&nbsp;
-  span {{ course.description }}
-p
-  b Objective:&nbsp;
-  span {{ course.objective }}
-p
-  b Module:&nbsp;&nbsp;
-  a(ng-href="/module/{{ module.id }}" class="module w3-btn w3-teal w3-round") {{ module.name }}
+div(class="w3-container")
+  h1 {{ course.name }}
+  p
+    b ID:&nbsp;
+    span {{ course.id }}
+  p
+    b Number:&nbsp;
+    span {{ course.number }}
+  p
+    b ECTS:&nbsp;
+    span {{ course.ects }}
+  p
+    b Type:&nbsp;
+    span {{ course.type }}
+  p
+    b Lecturer:&nbsp;
+    span {{ course.lecturer }}
+  p
+    b Description:&nbsp;
+    span {{ course.description }}
+  p
+    b Objective:&nbsp;
+    span {{ course.objective }}
+  p
+    b Module:&nbsp;&nbsp;
+    a(ng-href="/module/{{ module.id }}" class="module w3-btn w3-teal w3-round") {{ module.name }}

@@ -1,17 +1,18 @@
-h1 {{ module.name }}
-p {{ module.compulsory ? 'Compulsory' : 'Elective' }} Subject
-p
-  b ID:&nbsp;
-  span {{ module.id }}
-p
-  b Description:&nbsp;
-  span {{ module.description}}
-p
-  b Objective:&nbsp;
-  span {{ module.objective}}
+div(class="w3-container")
+  h1 {{ module.name }}
+  p {{ module.compulsory ? 'Compulsory' : 'Elective' }} Subject
+  p
+    b ID:&nbsp;
+    span {{ module.id }}
+  p
+    b Description:&nbsp;
+    span {{ module.description}}
+  p
+    b Objective:&nbsp;
+    span {{ module.objective}}
 
-h2 Linked Courses
-p
-  ul(class="list")
-    li(ng-repeat="course in courses")
-      a(ng-href="/course/{{ course.id }}" class="course w3-btn w3-blue w3-round") {{ course.number + ' | ' + course.name }}
+  h2 Linked Courses
+  p
+    ul(class="list")
+      li(ng-repeat="course in courses")
+        a(ng-href="/course/{{ course.id }}" class="course w3-btn w3-blue w3-round") {{ course.number + ' | ' + course.name }}
