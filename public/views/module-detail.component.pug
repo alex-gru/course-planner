@@ -1,5 +1,11 @@
 h1 {{ module.name }}
 p {{ module.compulsory ? 'Compulsory' : 'Elective' }} Subject
+p
+  b Description:&nbsp;
+  span {{ module.description}}
+p
+  b Objective:&nbsp;
+  span {{ module.objective}}
 
 h2 Linked Courses
 p

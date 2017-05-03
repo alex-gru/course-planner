@@ -24,6 +24,14 @@ div(class="w3-card-4 create-form")
         input(type="text" class="w3-input w3-border" value="{{ course.lecturer }}")
     div(class="w3-row")
       div(class="")
+        label(class="w3-text-blue") Description:
+        input(type="text" class="w3-input w3-border" value="{{ course.description }}")
+    div(class="w3-row")
+      div(class="")
+        label(class="w3-text-blue") Objective:
+        input(type="text" class="w3-input w3-border" value="{{ course.objective }}")
+    div(class="w3-row")
+      div(class="")
         label(class="w3-text-blue") Module:
         ul(class="list")
           li(ng-repeat="module in modules")

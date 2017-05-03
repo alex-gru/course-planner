@@ -6,7 +6,9 @@
     "ects": 4,
     "type": "P",
     "lecturer": "Hagenauer",
-    "moduleId": 3
+    "moduleId": 3,
+    "description": "Programming problems to illustrate and apply the material of the lecture; presentation and discussion of students' solutions.",
+    "objective": "Similar to lecture: Knowledge and practical use of concepts of procedural and object-oriented programming and Java language elements."
   },
   {
     "id": 2,
@@ -15,7 +17,9 @@
     "ects": 3,
     "type": "L",
     "lecturer": "Hagenauer",
-    "moduleId": 3
+    "moduleId": 3,
+    "description": "This lecture is part of the special introduction phase for first-year students of 'Angewandte Informatik', bachelor (Applied computer science)! Introduction to programming, using Java: simple programs, primitive types, expressions, assignment statements, conditional statements, loops, arrays, Strings, introduction to object-orientat concepts (classes, objects, methods).",
+    "objective": "Knowledge and practical use of concepts of procedural programming and Java language, basics for object-oriented programming"
   },
   {
     "id": 3,
@@ -24,7 +28,9 @@
     "ects": 3,
     "type": "L",
     "lecturer": "Sokolova",
-    "moduleId": 1
+    "moduleId": 1,
+    "description": "Basics of logic and set theory, algebraic structures. (more information can be found on the course webpage www.cs.uni-salzburg.at/~anas/FormaleSysteme)",
+    "objective": "The students will learn elementary theoretical notions needed for any further development in computer science, comparable to learning how to read and write. (more information can be found on the course webpage www.cs.uni-salzburg.at/~anas/FormaleSysteme)"
   },
   {
     "id": 4,
@@ -33,7 +39,9 @@
     "ects": 5,
     "type": "P",
     "lecturer": "Sokolova",
-    "moduleId": 1
+    "moduleId": 1,
+    "description": "Basics of logic and set theory, algebraic structures. (more information can be found on the course webpage www.cs.uni-salzburg.at/~anas/FormaleSysteme)",
+    "objective": "The students will learn elementary theoretical notions needed for any further development in computer science, comparable to learning how to read and write. (more information can be found on the course webpage www.cs.uni-salzburg.at/~anas/FormaleSysteme)"
   },
   {
     "id": 5,
@@ -42,7 +50,9 @@
     "ects": 3,
     "type": "L",
     "lecturer": "Held",
-    "moduleId": 1
+    "moduleId": 1,
+    "description": "* Number systems and basics of number theory;\n    * Theorem proving;\n    * Elementary combinatorics;\n    * Algorithm analysis and recurrence relations;\n    * Graph theory;\n    * Cryptography (if time permits).",
+    "objective": "Acquiring a good understanding of discrete mathematics, with an emphasis on its role within computer science."
   },
   {
     "id": 6,
@@ -51,6 +61,8 @@
     "ects": 2,
     "type": "L",
     "lecturer": "Uhl",
-    "moduleId": 5
+    "moduleId": 5  ,
+    "description": "Foundation of Image processing (Transforms, Segmentation, Edge Detection, morphological image processing, etc.)",
+    "objective": "Understand how photoshop works"
   }
 ]

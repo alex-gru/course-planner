@@ -37,7 +37,9 @@ if (mongoose.connection.readyState === 0) {
         {
           id: Number,
           name: String,
-          obligatory: Boolean
+          obligatory: Boolean,
+          description: String,
+          objective: String
         }
       ), 'modules');     // collection name
     CourseModel = mongoose.model('Course',
@@ -49,7 +51,9 @@ if (mongoose.connection.readyState === 0) {
           ects: Number,
           type: String,
           lecturer: String,
-          moduleId: Number
+          moduleId: Number,
+          description: String,
+          objective: String
         }
       ), 'courses');     // collection name
   });

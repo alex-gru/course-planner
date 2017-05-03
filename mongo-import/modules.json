@@ -2,26 +2,36 @@
   {
     "id": 1,
     "name": "Formal principles and maths",
-    "compulsory": true
+    "compulsory": true,
+    "description": "Formale Systeme: Aussagen- und Prädikatenlogik, Argumentieren und Beweisen, elementare Mengentheorie (Mengen, Relationen, Funktionen, Kardinalzahlen), endliche Automaten.\n    Diskrete Mathematik: elementare Zahlentheorie, Beweistechnik, elementare Kombinatorik, Komplexität und O-Notation, Graphentheorie.",
+    "objective": "Sachkompetenz: Kenntnisse und Wissen über theoretische und formale Grundlagen der Informatik besitzen und diese verständlich formulieren und erklären können. Studierende lernen präzises Argumentieren und Beweisen, angewandt in den Grundlagen der Informatik.\n    Methoden- und Handlungskompetenz: Fähigkeit, das erworbene Wissen zur Formalisierung von Problemstellungen theoretisch (z.B. Umsetzung von formalen Aufgabenstellungen) und praktisch (Lösung von konkreten Anwendungsproblemen)\n    umzusetzen.\n    Urteilskompetenz: Beurteilung von formalen und theoretischen Grundlagen der Informatik sowie zielgerichtete Nutzung dieser in Anwendungsbereichen."
   },
   {
     "id": 2,
     "name": "Technical computer science",
-    "compulsory": true
+    "compulsory": true,
+    "description": "Digitale Rechenanlagen: Kodierungstheorie, Zahlenrepräsentation, Logische Operationen\n    und Formen, Schaltungen, Mikroprogrammierung\n    Rechnerarchitektur: Grundkonzepte, Rechenprinzipien, Rechnerbestandteile,\n    Interrupts und DMA, Speichertechnologien, Caching, Adressierungsarten, Speicherschutz, Speicherhierarchien, CISC und RISC, Pipelining, Branch Prediction, Superskalarität, Parallelität\n    Netze und Verteilte Systeme: Übertragungstechnik, Zugang, Topologien, Entwurfsaspekte, Dienste, Schichten, Protokolle, Schnittstellen, Referenzmodelle, Bitübertragung, Sicherung, Vermittlung, Transport, Sitzung, Darstellung,\n    Anwendung, Internetprotokolle, Middleware, HW- und SW-Konzepte für verteilte Systeme, Web Services, Architekturen und Standards",
+    "objective": "Sachkompetenz: Grundlegende Kenntnisse und Wissen über die Architektur von Rechnern, sowie Aufbau und Funktionsweise digitaler Rechneranlagen, digitaler Netze und verteilter Systeme.\n    Methoden- und Handlungskompetenz: Fähigkeit, das erworbene Wissen zur Behandlung von Problemstellungen theoretisch (z.B. Lösung von formalen Aufgabenstellungen) und praktisch (z.B. Entwurf von Algorithmen, Umsetzung in Software) umzusetzen, zu testen und die Ergebnisse korrekt zu dokumentieren sowie zu interpretieren.\n    Urteilskompetenz: Beurteilung von Aufbau, Architektur, Hardware, Software, Algorithmen,\n    Verfahren, Protokollen und Diensten zur effektiven und effizienten Verarbeitung und Übertragung von Daten."
   },
   {
     "id": 3,
     "name": "Practical computer science",
-    "compulsory": true
+    "compulsory": true,
+    "description": "Programmiermethodik, systematischer Entwurf, Entwurfsmuster, adäquate Modularisierung, Projektverwaltung und Sprachkonzepte wie Strukturen, Speicherverwaltung, Objektorientierung, Generik, Ein-Ausgabe, Standard-Bibliotheken.",
+    "objective": "Sachkompetenz: Kenntnisse und Wissen über grundlegenden Begriffe, Methoden und Werkzeuge der Softwaretechnik mit Betonung auf: Was ist Software; was ist Software Engineering? Was sind die typischen Probleme der Software-Entwicklung? Sprachkonstrukte und -konzepte gängiger\n    Programmiersprachen werden verstanden und Programmiererfahrung wird erworben.\n    Methoden- und Handlungskompetenz: Projekte in der gegebenen Programmiersprache erfolgreich umsetzen können. Fähigkeit, Komplexitätsfallen bei der Softwareentwicklung zu erkennen. Methoden und\n    Werkzeuge so einzusetzen, dass Programme lesbarer werden und eine langfristige Wartbarkeit gesichert werden kann.\n    Urteilskompetenz: Software-Qualität erkennen und erreichen können, geeignete Programmiersprachen je nach Problemstellung auswählen können. Qualitätsmerkmale wie Wiederverwendbarkeit und Sicherheit von Programmen beurteilen können."
   },
   {
     "id": 4,
     "name": "General foundations of science",
-    "compulsory": true
+    "compulsory": true,
+    "description": "Spezifika und Methoden der informatischen Arbeitsweise im wissenschaftlichen und betrieblichen Bereich, Themen und Methoden der 'Salzburger IT', Modelle zur Planung und Abwicklung von IT-Projekten, gesellschaftliche und rechtliche Fragestellungen im Kontext mit IT-Projekten und IT-Themen.",
+    "objective": "Sachkompetenz: Kenntnisse und Wissen über grundlegende Methoden und Spielarten der informatischen Arbeitsweise und -welt bezogen auf wissenschaftliche als auch betriebliche Tätigkeit sowie deren Wechselwirkung mit gesellschaftlichen Fragestellungen.\n    Methoden- und Handlungskompetenz: Fähigkeit, das erworbene Wissen zur Behandlung von Aufgaben im Bereich Projektentwicklung und -durchführung, im\n    Bereich wissenschaftlichem Arbeiten und dessen Dokumentation und im Bereich des Beachtens von gesellschaftlichen Implikationen bei der Durchführung von IT-Projekten umzusetzen.\n    Urteilskompetenz: Fähigkeit zur Beurteilung von Projektplänen, wissenschaftlichen Konzepten und Publikationen hinsichtlich ihrer informatischen Korrektheit und Sinnhaftigkeit und bezüglich ihrer Wechselwirkungen mit gesellschaftlichen Fragestellungen."
   },
   {
     "id": 5,
     "name": "Image Processing",
-    "compulsory": false
+    "compulsory": false,
+    "description": "Bildsensorik und Bildgebung, Image Enhancement in Bild- und Transformationsbereichen, Kantenerkennung, Bildrekonstruktion,\n    Bildsegmentierung, Objekterkennung, verlustbehaftete und verlustfreie\n    Kompressionsverfahren für Bilder und Videos, Metriken zur Qualitätsbestimmung visueller Daten;",
+    "objective": "Sachkompetenz: Kenntnisse und Wissen über grundlegende Methoden der Bildgebung, der Bildverarbeitung und der Formate zur effizienten Speicherung von Bild- und Videodaten.\n    Methoden- und Handlungskompetenz: Fähigkeit, das erworbene Wissen zur Entwicklung von eigener Software im Bereich Bildverarbeitung und Kompression einzusetzen und die entwickelten Systeme zu evaluieren.\n    Urteilskompetenz: Fähigkeit zur Beurteilung von Fragestellungen und die entsprechende Auswahl von passenden Software- oder Hardwareinstrumenten zur\n    Lösung der darin enthaltenen Probleme."
   }
 ]
