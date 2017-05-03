@@ -1,6 +1,9 @@
 h1 {{ module.name }}
 p {{ module.compulsory ? 'Compulsory' : 'Elective' }} Subject
 p
+  b ID:&nbsp;
+  span {{ module.id }}
+p
   b Description:&nbsp;
   span {{ module.description}}
 p

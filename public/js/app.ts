@@ -19,6 +19,9 @@ const app = angular.module("app", ["ngRoute"])
       .when("/modules", {
         template: "<modules></modules>"
       })
+      .when("/modules/new", {
+        template: "<module-create></module-create>"
+      })
       .when("/module/:id", {
         template: "<module-detail></module-detail>"
       });

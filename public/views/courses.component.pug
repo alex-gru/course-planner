@@ -1,7 +1,10 @@
 div(class="w3-container")
   h1 Courses
-  a(ng-href="/courses/new" class="course w3-btn w3-round w3-blue")
-    i(class="fa fa-plus" aria-hidden="true")
+  p
+    a(ng-href="/courses/new" class="course w3-btn w3-round w3-red")
+      span
+        i(class="fa fa-plus" aria-hidden="true")
+        span &nbsp;Create course
   p
     ul(class="list")
       li(ng-repeat="course in courses")

@@ -18,10 +18,11 @@ input {
 
 ul.list {
     list-style: none;
+    padding: 0;
 }
 
 ul.list > li {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 /*MENU*/

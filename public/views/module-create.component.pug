@@ -1,0 +1,21 @@
+div(class="w3-card create-form")
+  div(class="w3-container w3-blue")
+    h2 New Module
+  form(class="w3-container w3-padding-small" action="/api/modules/new" method="POST")
+    div(class="w3-row")
+      label(class="w3-text-blue") ID:
+      input(type="text" class="w3-input w3-border" value="{{ module.id }}" name="module[id]")
+    div(class="w3-row")
+      label(class="w3-text-blue") Name:
+      input(type="text" class="w3-input w3-border" value="{{ module.name }}" name="module[name]")
+    div(class="w3-row")
+      label(class="w3-text-blue") Compulsory:
+      input(type="text" class="w3-input w3-border" value="{{ module.compulsory }}" name="module[compulsory]")
+    div(class="w3-row")
+      label(class="w3-text-blue") Description:
+      input(type="text" class="w3-input w3-border" value="{{ module.description }}" name="module[description]")
+    div(class="w3-row")
+      label(class="w3-text-blue") Objective:
+      input(type="text" class="w3-input w3-border" value="{{ module.objective }}" name="module[objective]")
+    br
+    button(type="submit" class="module w3-btn w3-red w3-round") Submit

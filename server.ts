@@ -3,6 +3,7 @@ import * as http from "http";
 import * as reload from "reload";
 import * as mongoose from "mongoose";
 import * as path from "path";
+import * as bodyParser from "body-parser";
 
 const port = 80;
 const app = express();
@@ -18,6 +19,11 @@ app.use("/views", express.static(__dirname + '/public/views'));
 // view engine setup
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'public/views'));
+
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json());
 
 const server = http.createServer(app);
 reload(server, app);
@@ -37,7 +43,7 @@ if (mongoose.connection.readyState === 0) {
         {
           id: Number,
           name: String,
-          obligatory: Boolean,
+          compulsory: Boolean,
           description: String,
           objective: String
         }
@@ -72,6 +78,22 @@ app.get('/api/courses', (req, res) => {
     res.json(courses);
   });
 });
+app.post('/api/courses/new', (req, res) => {
+  const newCourse = new CourseModel({
+    id: req.body.course.id,
+    name: req.body.course.name,
+    number: req.body.course.number,
+    ects: req.body.course.ects,
+    type: req.body.course.type,
+    lecturer: req.body.course.lecturer,
+    moduleId: req.body.course.moduleId,
+    description: req.body.course.description,
+    objective: req.body.course.objective
+  });
+  newCourse.save();
+  console.log("created new course");
+  res.redirect('/courses');
+});
 app.get('/api/course/:id', (req, res) => {
   if (req.params.id) {
     CourseModel.findOne({id: req.params.id}, (err, course) => {
@@ -83,6 +105,18 @@ app.get('/api/modules', (req, res) => {
   ModuleModel.find({}, (err, modules) => {
     res.json(modules);
   });
+});
+app.post('/api/modules/new', (req, res) => {
+  const newModule = new ModuleModel({
+    id: req.body.module.id,
+    name: req.body.module.name,
+    compulsory: req.body.module.compulsory,
+    description: req.body.module.description,
+    objective: req.body.module.objective
+  });
+  newModule.save();
+  console.log("created new module");
+  res.redirect('/modules');
 });
 app.get('/api/module/:id', (req, res) => {
   if (req.params.id) {

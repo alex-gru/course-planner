@@ -1,5 +1,10 @@
 h1 Modules
 p
+  a(ng-href="/modules/new" class="course w3-btn w3-round w3-red")
+    span
+      i(class="fa fa-plus" aria-hidden="true")
+      span &nbsp;Create module
+p
   ul(class="list")
     li(ng-repeat="module in modules")
       a(ng-href="/module/{{ module.id }}" class="module w3-btn w3-teal w3-round") {{ module.name }}

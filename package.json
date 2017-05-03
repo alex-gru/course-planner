@@ -25,7 +25,8 @@
     "http": "~0.0.0",
     "mongoose": "~4.9.5",
     "reload": "~1.1.2",
-    "pug-cli": "~1.0.0-alpha6"
+    "pug-cli": "~1.0.0-alpha6",
+    "body-parser": "~1.17.1"
   },
   "devDependencies": {
     "concurrently": "^3.2.0",
