@@ -7,7 +7,6 @@ import * as path from "path";
 const port = 80;
 const app = express();
 
-let Greeting;
 let CourseModel;
 let ModuleModel;
 
@@ -33,9 +32,6 @@ if (mongoose.connection.readyState === 0) {
   mongoose.connection.on('connected', () => {
     log("Connection to MongoDB established.");
 
-    Greeting = mongoose.model('Greeting',
-      new mongoose.Schema({text: String}),
-      'greetings');     // collection name
     ModuleModel = mongoose.model('Module',
       new mongoose.Schema(
         {
@@ -102,7 +98,5 @@ app.get('/api/module/:id/courses', (req, res) => {
 // SPA entrypoint
 
 app.get('*', function(req, res) {
-  Greeting.findOne((err, greeting) => {
-    res.render('index', {title: "Course Planner", greeting: greeting.text});
-  });
+  res.render('index', {title: "Course Planner"});
 });
