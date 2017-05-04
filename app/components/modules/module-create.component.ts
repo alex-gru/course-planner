@@ -1,5 +1,5 @@
-angular.module("app").component('moduleCreate', {
+app.component('moduleCreate', {
   templateUrl: '/components/modules/module-create.component.html',
-  controller: ($scope, $http, $routeParams) => {
+  controller: () => {
   }
 });

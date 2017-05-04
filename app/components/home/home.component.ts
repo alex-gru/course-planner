@@ -1,5 +1,5 @@
-angular.module("app").component('home', {
+app.component('home', {
   templateUrl: '/components/home/home.component.html',
-  controller: ($scope, $http, $routeParams) => {
+  controller: () => {
   }
 });

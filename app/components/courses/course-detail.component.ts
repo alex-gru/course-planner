@@ -1,10 +1,10 @@
-angular.module("app").component('courseDetail', {
+app.component('courseDetail', {
   templateUrl: '/components/courses/course-detail.component.html',
-  controller: ($scope, $http, $routeParams) => {
-    $http.get("/api/course/" + $routeParams.id).then((response) => {
+  controller: ($scope, $http, $routeParams, apiService) => {
+    apiService.getCourse($routeParams.id).then((response) => {
       $scope.course = response.data;
     }).then(() => {
-        $http.get("/api/module/" + $scope.course.moduleId).then((response) => {
+      apiService.getModule($scope.course.moduleId).then((response) => {
           $scope.module = response.data;
         });
       }

@@ -1,4 +1,4 @@
-angular.module("app").component('menu', {
+app.component('menu', {
   templateUrl: '/components/menu/menu.component.html',
   controller: ($scope, $http, $location) => {
     $scope.getClass = function (path) {

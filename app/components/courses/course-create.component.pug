@@ -18,7 +18,7 @@ div(class="w3-card create-form")
       input(type="text" class="w3-input w3-border" value="{{ course.number }}" name="course[number]")
     div(class="w3-row")
       label(class="w3-text-blue") ECTS:
-      input(type="number" class="w3-input w3-border" min="1" max="50" value="{{ course.ects }}" name="course[ects]")
+      input(type="number" class="w3-input w3-border" min="1" max="50" ng-value="{{ course.ects }}" name="course[ects]")
     div(class="w3-row")
       label(class="w3-text-blue") Type:
       input(type="text" class="w3-input w3-border" value="{{ course.type }}" name="course[type]")

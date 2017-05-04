@@ -1,7 +1,7 @@
-angular.module("app").component('courseCreate', {
+app.component('courseCreate', {
   templateUrl: '/components/courses/course-create.component.html',
-  controller: ($scope, $http, $routeParams) => {
-    $http.get("/api/modules").then((response) => {
+  controller: ($scope, $http, $routeParams, apiService) => {
+    apiService.getModules().then((response) => {
       $scope.modules = response.data;
     });
   }
