@@ -39,6 +39,9 @@
     "karma": "~1.6.0",
     "karma-jasmine": "~1.1.0",
     "karma-chrome-launcher": "~2.0.0",
-    "karma-typescript-preprocessor": "~0.3.1"
+    "karma-typescript-preprocessor": "~0.3.1",
+    "angular": "~1.6.4",
+    "@uirouter/angularjs": "~1.0.1",
+    "angular-mocks": "~1.6.4"
   }
 }

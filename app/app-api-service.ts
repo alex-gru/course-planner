@@ -4,7 +4,7 @@ app.factory('apiService', ['$http', ($http) => {
     return $http.get("/api/courses");
   }
 
-  function getCourse(id) {
+  function getCourse(id: Number) {
     return $http.get("/api/course/" + id);
   }
 
@@ -12,29 +12,45 @@ app.factory('apiService', ['$http', ($http) => {
     return $http.get("/api/modules");
   }
 
-  function getModule(id) {
+  function getModule(id: Number) {
     return $http.get("/api/module/" + id);
   }
 
-  function getCoursesOfModule(moduleId) {
+  function getCoursesOfModule(moduleId: Number) {
     return $http.get("/api/module/" + moduleId + "/courses");
   }
 
   function createCourse(id: Number, name: String, number: String, ects: Number, type: String, lecturer: String, moduleId: Number, description: String, objective: String) {
-    var data = JSON.stringify({id: id, name: name, number: number, ects: ects, type: type, lecturer: lecturer, moduleId: moduleId, description: description, objective: objective});
+    const data = JSON.stringify({
+      id: id,
+      name: name,
+      number: number,
+      ects: ects,
+      type: type,
+      lecturer: lecturer,
+      moduleId: moduleId,
+      description: description,
+      objective: objective
+    });
     return $http.put("/api/course", data);
   }
 
   function createModule(id: Number, name: String, compulsory: Boolean, description: String, objective: String) {
-    var data = JSON.stringify({id: id, name: name, compulsory: compulsory, description: description, objective: objective});
+    const data = JSON.stringify({
+      id: id,
+      name: name,
+      compulsory: compulsory,
+      description: description,
+      objective: objective
+    });
     return $http.put("/api/module", data);
   }
 
-  function deleteCourse(id) {
+  function deleteCourse(id: Number) {
     return $http.delete("/api/course/" + id);
   }
 
-  function deleteModule(id) {
+  function deleteModule(id: Number) {
     return $http.delete("/api/module/" + id);
   }
 
