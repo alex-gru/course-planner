@@ -40,3 +40,11 @@ menu {
 .create-form {
     max-width: 500px;
 }
+
+@media screen and (max-width: 550px) {
+    .w3-btn {
+        width:100%;
+        -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+    }
+}

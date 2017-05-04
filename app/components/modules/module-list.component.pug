@@ -1,11 +1,11 @@
 div(class="w3-container")
   h1 Modules
   p
-    a(ng-href="/modules/new" class="course w3-btn w3-round w3-red")
+    a(ng-href="/modules/new" class="w3-btn w3-round w3-red" title="Create module")
       span
         i(class="fa fa-plus" aria-hidden="true")
         span &nbsp;Create module
   p
     ul(class="list")
       li(ng-repeat="module in modules")
-        a(ng-href="/module/{{ module.id }}" class="module w3-btn w3-teal w3-round") {{ module.name }}
+        a(ng-href="/module/{{ module.id }}" class="w3-btn w3-teal w3-round w3-left-align" title="{{ module.name }}") {{ module.name }}
