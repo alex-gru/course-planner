@@ -76,22 +76,7 @@ app.get('/api/courses', (req, res) => {
     res.json(courses);
   });
 });
-app.post('/api/courses/new', (req, res) => {
-  const newCourse = new CourseModel({
-    id: req.body.course.id,
-    name: req.body.course.name,
-    number: req.body.course.number,
-    ects: req.body.course.ects,
-    type: req.body.course.type,
-    lecturer: req.body.course.lecturer,
-    moduleId: req.body.course.moduleId,
-    description: req.body.course.description,
-    objective: req.body.course.objective
-  });
-  newCourse.save();
-  console.log("created new course");
-  res.redirect('/courses');
-});
+
 app.get('/api/course/:id', (req, res) => {
   if (req.params.id) {
     CourseModel.findOne({id: req.params.id}, (err, course) => {
@@ -99,23 +84,13 @@ app.get('/api/course/:id', (req, res) => {
     });
   }
 });
+
 app.get('/api/modules', (req, res) => {
   ModuleModel.find({}, (err, modules) => {
     res.json(modules);
   });
 });
-app.post('/api/modules/new', (req, res) => {
-  const newModule = new ModuleModel({
-    id: req.body.module.id,
-    name: req.body.module.name,
-    compulsory: req.body.module.compulsory,
-    description: req.body.module.description,
-    objective: req.body.module.objective
-  });
-  newModule.save();
-  console.log("created new module");
-  res.redirect('/modules');
-});
+
 app.get('/api/module/:id', (req, res) => {
   if (req.params.id) {
     ModuleModel.findOne({id: req.params.id}, (err, module) => {
@@ -123,12 +98,43 @@ app.get('/api/module/:id', (req, res) => {
     });
   }
 });
+
 app.get('/api/module/:id/courses', (req, res) => {
   if (req.params.id) {
     CourseModel.find({moduleId: req.params.id}, (err, courses) => {
       res.json(courses);
     });
   }
+});
+
+app.put("/api/course", (req, res) => {
+  console.log("Create new course: " + req.body.id);
+  const newCourse = new CourseModel({
+    id: req.body.id,
+    name: req.body.name,
+    number: req.body.number,
+    ects: req.body.ects,
+    type: req.body.type,
+    lecturer: req.body.lecturer,
+    moduleId: req.body.moduleId,
+    description: req.body.description,
+    objective: req.body.objective
+  });
+  newCourse.save();
+  res.json("ok");
+});
+
+app.put("/api/module", (req, res) => {
+  console.log("Create new module: " + req.body.id);
+  const newModule = new ModuleModel({
+    id: req.body.id,
+    name: req.body.name,
+    compulsory: req.body.compulsory,
+    description: req.body.description,
+    objective: req.body.objective
+  });
+  newModule.save();
+  res.json("ok");
 });
 
 app.delete('/api/course/:id', (req, res) => {

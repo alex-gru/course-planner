@@ -10,7 +10,7 @@ app.component('courseDetail', {
       }
     );
 
-    $scope.deleteCourse = function(id: Number) {
+    $scope.deleteCourse = (id: Number) => {
       apiService.deleteCourse(id).then(() => {
         $location.path('/courses');
       });

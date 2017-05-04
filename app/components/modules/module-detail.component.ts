@@ -8,7 +8,7 @@ app.component('moduleDetail', {
       $scope.courses = response.data;
     });
 
-    $scope.deleteModule = function(id: Number) {
+    $scope.deleteModule = (id: Number) => {
       if (confirm("Sure? Module and linked courses will be deleted.")) {
         apiService.deleteModule(id).then(() => {
           $location.path('/modules');
