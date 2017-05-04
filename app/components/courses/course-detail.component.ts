@@ -1,6 +1,6 @@
 app.component('courseDetail', {
   templateUrl: '/components/courses/course-detail.component.html',
-  controller: ($scope, $http, $routeParams, apiService) => {
+  controller: ($scope, $http, $routeParams, $location, apiService) => {
     apiService.getCourse($routeParams.id).then((response) => {
       $scope.course = response.data;
     }).then(() => {
@@ -9,5 +9,11 @@ app.component('courseDetail', {
         });
       }
     );
+
+    $scope.deleteCourse = function(id: Number) {
+      apiService.deleteCourse(id).then(() => {
+        $location.path('/courses');
+      });
+    }
   }
 });

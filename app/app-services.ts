@@ -20,11 +20,21 @@ app.factory('apiService', ['$http', ($http) => {
     return $http.get("/api/module/" + moduleId + "/courses");
   }
 
+  function deleteCourse(id) {
+    return $http.delete("/api/course/" + id);
+  }
+
+  function deleteModule(id) {
+    return $http.delete("/api/module/" + id);
+  }
+
   return {
     getCourses: getCourses,
     getCourse: getCourse,
     getModules: getModules,
     getModule: getModule,
-    getCoursesOfModule: getCoursesOfModule
+    getCoursesOfModule: getCoursesOfModule,
+    deleteCourse: deleteCourse,
+    deleteModule: deleteModule
   }
 }]);

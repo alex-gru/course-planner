@@ -131,6 +131,23 @@ app.get('/api/module/:id/courses', (req, res) => {
   }
 });
 
+app.delete('/api/course/:id', (req, res) => {
+  if (req.params.id) {
+    log("Delete course: " + req.params.id);
+    CourseModel.find({id: req.params.id}).remove().exec();
+    res.json("ok");
+  }
+});
+
+app.delete('/api/module/:id', (req, res) => {
+  if (req.params.id) {
+    log("Delete module (and linked courses): " + req.params.id);
+    ModuleModel.find({id: req.params.id}).remove().exec();
+    CourseModel.find({moduleId: req.params.id}).remove().exec();
+    res.json("ok");
+  }
+});
+
 // SPA entrypoint
 
 app.get('*', function (req, res) {

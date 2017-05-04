@@ -1,5 +1,9 @@
 div(class="w3-container")
   h1 {{ module.name }}
+  a(ng-click="deleteModule(module.id)" class="w3-btn w3-round w3-red" title="Delete")
+    span
+      i(class="fa fa-trash" aria-hidden="true")
+      span &nbsp;Delete
   p {{ module.compulsory ? 'Compulsory' : 'Elective' }} Subject
   p
     b ID:&nbsp;
