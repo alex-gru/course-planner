@@ -10,12 +10,6 @@ First, install dependencies locally.
 
 `npm install`
 
-Now, we use `docker-compose` for orchestration of the 3 docker containers used:
-
-- `web` is the node.js web server (based on the slim [mhart/alpine-node](https://hub.docker.com/r/mhart/alpine-node/))
-- `mongo` is the mongoDB database (based on [mongo](https://hub.docker.com/_/mongo/))
-- `mongo-import` feeds the db in `mongo` with some dummy data (see sub-directory `mongo-import`, also based on [mongo](https://hub.docker.com/_/mongo/))
-
 ##### Run Production
 `docker-compose -f compose-base.yml -f compose-prod.yml up`
 
