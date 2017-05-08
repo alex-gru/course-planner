@@ -12,7 +12,7 @@ app.config(['$routeProvider', '$locationProvider', ($routeProvider, $locationPro
     .when("/courses", {
       template: "<course-list></course-list>"
     })
-    .when("/course/:id", {
+    .when("/course/:_id", {
       template: "<course-detail></course-detail>"
     })
     .when("/modules", {
@@ -21,7 +21,7 @@ app.config(['$routeProvider', '$locationProvider', ($routeProvider, $locationPro
     .when("/modules/new", {
       template: "<module-create></module-create>"
     })
-    .when("/module/:id", {
+    .when("/module/:_id", {
       template: "<module-detail></module-detail>"
     });
   $locationProvider.html5Mode(true);

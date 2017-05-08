@@ -6,7 +6,7 @@ app.component('courseCreate', {
     });
 
     $scope.createCourse = () => {
-      apiService.createCourse($scope.id, $scope.name, $scope.number, $scope.ects, $scope.type, $scope.lecturer, $scope.moduleId, $scope.description, $scope.objective)
+      apiService.createCourse($scope.name, $scope.number, $scope.ects, $scope.type, $scope.lecturer, $scope.moduleId, $scope.description, $scope.objective)
         .then(() => {
         $location.path('/courses');
       });

@@ -5,11 +5,8 @@ div(class="w3-card create-form")
     div(class="w3-row")
       label(class="w3-text-blue") Module:
       select(class="w3-select w3-teal" ng-model="moduleId")
-        option(ng-repeat="module in modules" value="{{ module.id }}")
+        option(ng-repeat="module in modules" value="{{ module._id }}")
           a {{ module.name }}
-    div(class="w3-row")
-      label(class="w3-text-blue") ID:
-      input(type="text" class="w3-input w3-border" ng-model="id")
     div(class="w3-row")
       label(class="w3-text-blue") Name:
       input(type="text" class="w3-input w3-border" ng-model="name")

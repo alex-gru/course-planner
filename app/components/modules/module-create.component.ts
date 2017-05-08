@@ -3,7 +3,7 @@ app.component('moduleCreate', {
   controller: ($scope, $location, apiService) => {
 
     $scope.createModule = () => {
-      apiService.createModule($scope.id, $scope.name, $scope.compulsory, $scope.description, $scope.objective)
+      apiService.createModule($scope.name, $scope.compulsory, $scope.description, $scope.objective)
         .then(() => {
           $location.path('/modules');
         });

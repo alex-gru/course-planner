@@ -1,13 +1,10 @@
 div(class="w3-container")
   h1 {{ module.name }}
-  a(ng-click="deleteModule(module.id)" class="w3-btn w3-round w3-red" title="Delete")
+  a(ng-click="deleteModule(module._id)" class="w3-btn w3-round w3-red" title="Delete")
     span
       i(class="fa fa-trash" aria-hidden="true")
       span &nbsp;Delete
   p {{ module.compulsory ? 'Compulsory' : 'Elective' }} Subject
-  p
-    b ID:&nbsp;
-    span {{ module.id }}
   p
     b Description:&nbsp;
     span {{ module.description}}
@@ -19,4 +16,4 @@ div(class="w3-container")
   p
     ul(class="list")
       li(ng-repeat="course in courses")
-        a(ng-href="/course/{{ course.id }}" class="w3-btn w3-blue w3-round") {{ course.number + ' | ' + course.name }}
+        a(ng-href="/course/{{ course._id }}" class="w3-btn w3-blue w3-round") {{ course.number + ' | ' + course.name }}

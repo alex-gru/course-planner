@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "_id": 1,
     "name": "Introduction to Programming",
     "number": "511.053",
     "ects": 4,
@@ -11,7 +11,7 @@
     "objective": "Similar to lecture: Knowledge and practical use of concepts of procedural and object-oriented programming and Java language elements."
   },
   {
-    "id": 2,
+    "_id": 2,
     "name": "Introduction to Programming",
     "number": "511.052",
     "ects": 3,
@@ -22,7 +22,7 @@
     "objective": "Knowledge and practical use of concepts of procedural programming and Java language, basics for object-oriented programming"
   },
   {
-    "id": 3,
+    "_id": 3,
     "name": "Mathematical Foundations",
     "number": "511.001",
     "ects": 3,
@@ -33,7 +33,7 @@
     "objective": "The students will learn elementary theoretical notions needed for any further development in computer science, comparable to learning how to read and write. (more information can be found on the course webpage www.cs.uni-salzburg.at/~anas/FormaleSysteme)"
   },
   {
-    "id": 4,
+    "_id": 4,
     "name": "Mathematical Foundations",
     "number": "511.002",
     "ects": 5,
@@ -44,7 +44,7 @@
     "objective": "The students will learn elementary theoretical notions needed for any further development in computer science, comparable to learning how to read and write. (more information can be found on the course webpage www.cs.uni-salzburg.at/~anas/FormaleSysteme)"
   },
   {
-    "id": 5,
+    "_id": 5,
     "name": "Discrete Mathematics for Computer Science",
     "number": "511.007",
     "ects": 3,
@@ -55,7 +55,7 @@
     "objective": "Acquiring a good understanding of discrete mathematics, with an emphasis on its role within computer science."
   },
   {
-    "id": 6,
+    "_id": 6,
     "name": "Image Processing and Computer Vision",
     "number": "511.120",
     "ects": 2,

@@ -1,12 +1,9 @@
 div(class="w3-container")
   h1 {{ course.name }}
-  a(ng-click="deleteCourse(course.id)" class="w3-btn w3-round w3-red" title="Delete")
+  a(ng-click="deleteCourse(course._id)" class="w3-btn w3-round w3-red" title="Delete")
     span
       i(class="fa fa-trash" aria-hidden="true")
       span &nbsp;Delete
-  p
-    b ID:&nbsp;
-    span {{ course.id }}
   p
     b Number:&nbsp;
     span {{ course.number }}
@@ -27,4 +24,4 @@ div(class="w3-container")
     span {{ course.objective }}
   p
     b Module:&nbsp;&nbsp;
-    a(ng-href="/module/{{ module.id }}" class="module w3-btn w3-teal w3-round") {{ module.name }}
+    a(ng-href="/module/{{ module._id }}" class="module w3-btn w3-teal w3-round") {{ module.name }}
