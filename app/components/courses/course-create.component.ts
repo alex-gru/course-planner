@@ -3,6 +3,7 @@ app.component('courseCreate', {
   controller: ($scope, $http, $routeParams, $location, apiService) => {
     apiService.getModules().then((response) => {
       $scope.modules = response.data;
+      $scope.moduleId = $scope.modules[0]._id;
     });
 
     $scope.createCourse = () => {
