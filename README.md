@@ -3,7 +3,7 @@
 Plan your curriculum with this tool. The webapp is a MEAN-TS application, based on my [starter project I provide here](https://github.com/alex-gru/docker-MEAN-ts-starter). 
 
 ### Documentation
-This project was realized for the course ``Selected Topics in Software Engineering`` (Supervisor: [Dr. Andreas Naderlinger](http://www.softwareresearch.net/team/researchers/andreas-naderlinger/)), Dept. of CS, University of Salzburg, Austria.
+This project was realized for the graduate course ``Selected Topics in Software Engineering`` (Supervisor: [Dr. Andreas Naderlinger](http://www.softwareresearch.net/team/researchers/andreas-naderlinger/)), Dept. of CS, University of Salzburg, Austria.
 
 Further notes can be found [here](https://docs.google.com/document/d/1RymleWm07xmH_LnFB5_LOq7yFwj1wB7OvTax7AeAAUc/edit?usp=sharing).
 
