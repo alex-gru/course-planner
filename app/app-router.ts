@@ -23,6 +23,12 @@ app.config(['$routeProvider', '$locationProvider', ($routeProvider, $locationPro
     })
     .when("/module/:_id", {
       template: "<module-detail></module-detail>"
+    })
+    .when("/not-found", {
+      template: "<not-found></not-found>"
+    })
+    .otherwise({
+      redirectTo: "/home",
     });
   $locationProvider.html5Mode(true);
 }]);

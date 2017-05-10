@@ -23,5 +23,8 @@ div(class="w3-container")
     b Objective:&nbsp;
     span {{ course.objective }}
   p
+    b Prerequisites:&nbsp;
+    span {{ course.prerequisites }}
+  p
     b Module:&nbsp;&nbsp;
     a(ng-href="/module/{{ module._id }}" class="module w3-btn w3-teal w3-round") {{ module.name }}

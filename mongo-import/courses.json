@@ -63,6 +63,7 @@
     "lecturer": "Uhl",
     "moduleId": 5  ,
     "description": "Foundation of Image processing (Transforms, Segmentation, Edge Detection, morphological image processing, etc.)",
-    "objective": "Understand how photoshop works"
+    "objective": "Understand how photoshop works",
+    "prerequisites": "Formal courses and Linear Algebra."
   }
 ]
