@@ -11,6 +11,10 @@ Further notes can be found [here](https://docs.google.com/document/d/1RymleWm07x
 ## Application Stack
 For the full list of features, check the README of my [docker-mean-ts-starter repo](https://github.com/alex-gru/docker-MEAN-ts-starter).
 
+## Prerequisites
+
+[`Docker`](https://docs.docker.com/engine/installation/#supported-platforms) and [`Docker Compose`](https://docs.docker.com/compose/install/) are necessary.
+
 ## Build & Run
 First, install dependencies locally. 
 
