@@ -1,6 +1,10 @@
 div(class="w3-container")
   h1 {{ module.name }}
-  a(ng-click="deleteModule(module._id)" class="w3-btn w3-round w3-red" title="Delete")
+  a(ng-href="/module/{{module._id}}/edit" class="w3-btn w3-round w3-teal" title="Edit")
+    span
+      i(class="fa fa-edit" aria-hidden="true")
+      span &nbsp;Edit
+  a(ng-click="deleteModule(module._id)" class="w3-btn w3-round w3-red w3-margin-left" title="Delete")
     span
       i(class="fa fa-trash" aria-hidden="true")
       span &nbsp;Delete

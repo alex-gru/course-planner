@@ -1,18 +1,18 @@
-div(class="w3-card create-form")
+div(class="w3-card edit-form")
   div(class="w3-container w3-teal")
-    h2 New Module
+    h2 {{ isNew ? "New" : "Edit" }} Module
   form(class="w3-container w3-padding-16")
     div(class="w3-row")
       label(class="w3-text-blue") Name:
-      input(type="text" class="w3-input w3-border" ng-model="name")
+      input(type="text" class="w3-input w3-border" ng-model="module.name")
     div(class="w3-row")
       label(class="w3-text-blue") Description:
-      input(type="text" class="w3-input w3-border" ng-model="description")
+      input(type="text" class="w3-input w3-border" ng-model="module.description")
     div(class="w3-row")
       label(class="w3-text-blue") Objective:
-      input(type="text" class="w3-input w3-border" ng-model="objective")
+      input(type="text" class="w3-input w3-border" ng-model="module.objective")
     br
-    a(ng-click="createModule()" class="w3-btn w3-round w3-red" title="Submit") Submit
+    a(ng-click="submit()" class="w3-btn w3-round w3-red" title="Submit") Submit
     input(class="w3-radio w3-margin-left" type="radio" ng-model="compulsory" ng-value="true")
     label  Compulsory
     input(class="w3-radio w3-margin-left" type="radio" ng-model="compulsory" ng-value="false")

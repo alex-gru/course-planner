@@ -27,6 +27,9 @@ app.config(['$routeProvider', '$locationProvider', ($routeProvider, $locationPro
     .when("/module/:_id", {
       template: "<module-detail></module-detail>"
     })
+    .when("/module/:_id/edit", {
+      template: "<module-create></module-create>"
+    })
     .when("/not-found", {
       template: "<not-found></not-found>"
     })
