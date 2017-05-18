@@ -1,3 +1,11 @@
 div(class="w3-container")
   h1 Not found!
-  a(ng-href="/home" class="w3-btn w3-red w3-round") Back to Home
+  p Please check your provided data.
+  a(ng-click="back()" class="w3-btn w3-round w3-black" title="Back")
+    span
+      i(class="fa fa-arrow-left" aria-hidden="true")
+      span &nbsp;Back
+  a(ng-href="/home" class="w3-btn w3-green w3-round w3-margin-left" title="Home")
+    span
+      i(class="fa fa-home" aria-hidden="true")
+      span &nbsp;Home
