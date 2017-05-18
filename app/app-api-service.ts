@@ -44,6 +44,32 @@ app.factory('apiService', ['$http', ($http) => {
     return $http.put("/api/module", data);
   }
 
+function updateCourse(_id: Number, name: String, number: String, ects: Number, type: String, lecturer: String, moduleId: Number, description: String, objective: String) {
+    const data = JSON.stringify({
+      _id: _id,
+      name: name,
+      number: number,
+      ects: ects,
+      type: type,
+      lecturer: lecturer,
+      moduleId: moduleId,
+      description: description,
+      objective: objective
+    });
+    return $http.post("/api/course", data);
+  }
+
+  function updateModule(_id: Number, name: String, compulsory: Boolean, description: String, objective: String) {
+    const data = JSON.stringify({
+      _id: _id,
+      name: name,
+      compulsory: compulsory,
+      description: description,
+      objective: objective
+    });
+    return $http.post("/api/module", data);
+  }
+
   function deleteCourse(_id: Number) {
     return $http.delete("/api/course/" + _id);
   }
@@ -59,7 +85,9 @@ app.factory('apiService', ['$http', ($http) => {
     getModule: getModule,
     getCoursesOfModule: getCoursesOfModule,
     createCourse: createCourse,
-    createModule: createModule,
+    createModule: createModule,    
+    updateCourse: updateCourse,
+    updateModule: updateModule,
     deleteCourse: deleteCourse,
     deleteModule: deleteModule
   }

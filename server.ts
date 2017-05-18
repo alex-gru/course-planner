@@ -129,6 +129,22 @@ app.put("/api/course", (req, res) => {
   res.json("ok");
 });
 
+app.post("/api/course", (req, res) => {
+  console.log("Update course: " + req.body._id);
+  CourseModel.findById(req.body._id, function (err, course) {
+    course.name = req.body.name;
+    course.number = req.body.number;
+    course.ects = req.body.ects;
+    course.type = req.body.type;
+    course.lecturer = req.body.lecturer;
+    course.moduleId = req.body.moduleId;
+    course.description = req.body.description;
+    course.objective = req.body.objective;
+    course.save();
+    res.json("ok");
+  });
+});
+
 app.put("/api/module", (req, res) => {
   console.log("Create new module.");
   const newModule = new ModuleModel({
@@ -139,6 +155,18 @@ app.put("/api/module", (req, res) => {
   });
   newModule.save();
   res.json("ok");
+});
+
+app.post("/api/module", (req, res) => {
+  console.log("Update module: " + req.body._id);
+  ModuleModel.findById(req.body._id, function (err, module) {
+    module.name = req.body.name;
+    module.compulsory = req.body.compulsory;
+    module.description = req.body.description;
+    module.objective = req.body.objective;
+    module.save();
+    res.json("ok");
+  });
 });
 
 app.delete('/api/course/:_id', (req, res) => {

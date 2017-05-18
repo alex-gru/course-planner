@@ -1,6 +1,6 @@
 div(class="w3-card create-form")
   div(class="w3-container w3-blue")
-    h2 New Course
+    h2 {{ isNew ? "New" : "Edit" }} Course
   form(class="w3-container w3-padding-16")
     div(class="w3-row")
       label(class="w3-text-blue") Module:
@@ -9,24 +9,24 @@ div(class="w3-card create-form")
           a {{ module.name }}
     div(class="w3-row")
       label(class="w3-text-blue") Name:
-      input(type="text" class="w3-input w3-border" ng-model="name")
+      input(type="text" class="w3-input w3-border" ng-model="course.name")
     div(class="w3-row")
       label(class="w3-text-blue") Number:
-      input(type="text" class="w3-input w3-border" ng-model="number")
+      input(type="text" class="w3-input w3-border" ng-model="course.number")
     div(class="w3-row")
       label(class="w3-text-blue") ECTS:
-      input(type="number" class="w3-input w3-border" min="1" max="50" ng-model="ects")
+      input(type="number" class="w3-input w3-border" min="1" max="50" ng-model="course.ects")
     div(class="w3-row")
       label(class="w3-text-blue") Type:
-      input(type="text" class="w3-input w3-border" ng-model="type")
+      input(type="text" class="w3-input w3-border" ng-model="course.type")
     div(class="w3-row")
       label(class="w3-text-blue") Lecturer:
-      input(type="text" class="w3-input w3-border" ng-model="lecturer")
+      input(type="text" class="w3-input w3-border" ng-model="course.lecturer")
     div(class="w3-row")
       label(class="w3-text-blue") Description:
-      input(type="text" class="w3-input w3-border" ng-model="description")
+      input(type="text" class="w3-input w3-border" ng-model="course.description")
     div(class="w3-row")
       label(class="w3-text-blue") Objective:
-      input(type="text" class="w3-input w3-border" ng-model="objective")
+      input(type="text" class="w3-input w3-border" ng-model="course.objective")
     br
-    a(ng-click="createCourse()" class="w3-btn w3-round w3-red" title="Submit") Submit
+    a(ng-click="submit()" class="w3-btn w3-round w3-red" title="Submit") Submit

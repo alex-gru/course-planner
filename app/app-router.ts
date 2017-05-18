@@ -7,13 +7,16 @@ app.config(['$routeProvider', '$locationProvider', ($routeProvider, $locationPro
       template: "<home></home>"
     })
     .when("/courses/new", {
-      template: "<course-create></course-create>"
+      template: "<course-edit></course-edit>"
     })
     .when("/courses", {
       template: "<course-list></course-list>"
     })
     .when("/course/:_id", {
       template: "<course-detail></course-detail>"
+    })
+    .when("/course/:_id/edit", {
+      template: "<course-edit></course-edit>"
     })
     .when("/modules", {
       template: "<module-list></module-list>"
