@@ -22,13 +22,13 @@ app.config(['$routeProvider', '$locationProvider', ($routeProvider, $locationPro
       template: "<module-list></module-list>"
     })
     .when("/modules/new", {
-      template: "<module-create></module-create>"
+      template: "<module-edit></module-edit>"
     })
     .when("/module/:_id", {
       template: "<module-detail></module-detail>"
     })
     .when("/module/:_id/edit", {
-      template: "<module-create></module-create>"
+      template: "<module-edit></module-edit>"
     })
     .when("/not-found", {
       template: "<not-found></not-found>"

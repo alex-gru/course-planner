@@ -1,5 +1,5 @@
-app.component('moduleCreate', {
-  templateUrl: '/components/modules/module-create.component.html',
+app.component('moduleEdit', {
+  templateUrl: '/components/modules/module-edit.component.html',
   controller: ($scope, $location, $routeParams, apiService) => {
 
     if ($routeParams._id) {
