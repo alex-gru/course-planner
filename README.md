@@ -21,7 +21,7 @@ First, install dependencies locally.
 `npm install`
 
 ##### Run Production
-`docker-compose -f compose-base.yml -f compose-prod.yml up`
+`docker-compose -f compose-base.yml -f compose-prod.yml up --build`
 
 ##### Run Dev
 `docker-compose -f compose-base.yml -f compose-dev.yml up --build`
