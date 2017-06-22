@@ -1,3 +1,5 @@
+let inject: any;
+
 describe("Check api-service used in angular app", function () {
   let apiService, $httpBackend;
 
@@ -12,7 +14,7 @@ describe("Check api-service used in angular app", function () {
   const URL_DELETE_COURSE = '/api/course/' + TEST_ID;
   const URL_DELETE_MODULE = '/api/module/' + TEST_ID;
 
-  beforeEach(module("app"));
+  beforeEach(() => angular.module('app'));
   beforeEach(() => {
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 8000;
   });
@@ -22,7 +24,6 @@ describe("Check api-service used in angular app", function () {
       apiService = $injector.get('apiService');
       $httpBackend = $injector.get('$httpBackend');
     });
-
 
     // return just empty response = mocking the server for $http requests in api-service
 
