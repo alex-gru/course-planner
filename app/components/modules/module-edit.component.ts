@@ -17,6 +17,10 @@ app.component('moduleEdit', {
     }
 
     $scope.submit = () => {
+      if (!$scope.module) {
+        alert("Please provide some data.");
+        return;
+      }
       if ($scope.isNew) {
         // create
         apiService.createModule($scope.module.name, $scope.compulsory, $scope.module.description, $scope.module.objective)

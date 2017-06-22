@@ -20,6 +20,14 @@ app.component('courseEdit', {
     });
 
     $scope.submit = () => {
+      if (!$scope.course) {
+        alert("Please provide some data.");
+        return;
+      }
+      if (!$scope.course.ects) {
+        alert("Please enter a valid numerical ECTS value (1-50).");
+        return;
+      }
       if ($scope.isNew) {
         // create
         apiService.createCourse($scope.course.name, $scope.course.number, $scope.course.ects, $scope.course.type, $scope.course.lecturer, $scope.moduleId, $scope.course.description, $scope.course.objective)
